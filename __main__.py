@@ -1,9 +1,28 @@
+import os
+import logging
+from dotenv import load_dotenv
 from app import App
 
-if __name__ == '__main__':
-    app = App()
-    app.start()
 
+# Load environment variables from .env file
+load_dotenv()
+
+# Set up logging configuration
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
+# Access environment variable (e.g., to identify the environment the app is running in)
+environment = os.getenv('ENVIRONMENT', 'development')  # Default to 'development' if ENVIRONMENT is not set
+
+logging.info(f"Starting application in {environment} environment")
+
+if __name__ == '__main__':
+    try:
+        # Initialize and start the app
+        app = App()
+        app.start()
+    except Exception as e:
+        logging.error(f"An error occurred: {e}")
 '''
 import sys
 from app.calculator import calculate

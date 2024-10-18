@@ -1,5 +1,6 @@
 import pytest
 from app import App
+from app.plugins.divide import DivideCommand
 
 # Initialize the App instance
 app = App()
