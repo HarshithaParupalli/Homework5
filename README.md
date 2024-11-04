@@ -22,7 +22,6 @@ The QR Code Generator Project is a Python-based application that generates a QR 
 - [Docker](https://www.docker.com/get-started) must be installed and running on your system.
 - Basic knowledge of Python and Docker commands.
 
-### Installation and Usage
 
 ### QR Code Linking to My GitHub
 ![GitHub QR Code](./my_github_qr.png)
